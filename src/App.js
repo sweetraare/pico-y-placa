@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import PlateInput from "./components/PlateInput";
+import DateInput from "./components/DateInput";
+import QueryButton from "./components/QueryButton";
 
 function App() {
+  const [date, setSelectedDate] = useState("");
+  const [plate, setPlate] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page-container">
+      <div className="container">
+        <h1 className="title">Pico y Placa</h1>
+        <PlateInput plateProp={{ plate, setPlate }} />
+        <DateInput dateProp={{ date, setSelectedDate }} />
+        <QueryButton />
+      </div>
     </div>
   );
 }
