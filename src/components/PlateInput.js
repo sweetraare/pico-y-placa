@@ -18,6 +18,9 @@ function PlateInput({ plateProp }) {
           onChange={(e) => setPlate(e.target.value.toUpperCase())}
         />
       </label>
+      {plate?.replaceAll?.("_", "").length !== 8 && (
+        <p className="error-message">Debe ingresar una placa válida</p>
+      )}
     </div>
   );
 }
