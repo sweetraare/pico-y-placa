@@ -8,6 +8,7 @@
   --greyLight-3: #bec8e4;
   --greyDark: #9baacf;
   --background: #3b3b3b;
+  --error: #ff3333;
 }
 
 *,
@@ -79,4 +80,11 @@ body {
 }
 .btn:active {
   box-shadow: inset 6px 6px 12px #2d2d2d, inset -6px -6px 12px #494949;
+}
+
+.error-message {
+  justify-self: flex-end;
+  color: var(--error);
+  font-size: 0.85rem;
+  text-align: right;
 }

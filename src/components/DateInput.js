@@ -21,6 +21,9 @@ function DateInput({ dateProp }) {
           minDate={new Date()}
         />
       </label>
+      {date?.length === 0 && (
+        <p className="error-message">Debe seleccionar una fecha</p>
+      )}
     </div>
   );
 }
