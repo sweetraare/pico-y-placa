@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pico-y-placa/static/css/main.0f2cb38a.chunk.css",
-    "main.js": "/pico-y-placa/static/js/main.911514fe.chunk.js",
-    "main.js.map": "/pico-y-placa/static/js/main.911514fe.chunk.js.map",
+    "main.js": "/pico-y-placa/static/js/main.75691a7e.chunk.js",
+    "main.js.map": "/pico-y-placa/static/js/main.75691a7e.chunk.js.map",
     "runtime-main.js": "/pico-y-placa/static/js/runtime-main.513b37d0.js",
     "runtime-main.js.map": "/pico-y-placa/static/js/runtime-main.513b37d0.js.map",
     "static/css/2.d22f252f.chunk.css": "/pico-y-placa/static/css/2.d22f252f.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.d22f252f.chunk.css",
     "static/js/2.ae0466ea.chunk.js",
     "static/css/main.0f2cb38a.chunk.css",
-    "static/js/main.911514fe.chunk.js"
+    "static/js/main.75691a7e.chunk.js"
   ]
 }
