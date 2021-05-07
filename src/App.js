@@ -4,6 +4,7 @@ import PlateInput from "./components/PlateInput";
 import DateInput from "./components/DateInput";
 import QueryButton from "./components/QueryButton";
 import NormalResult from "./components/NormalResult";
+import HoyNoCirculaResult from "./components/HoyNoCirculaResult";
 
 function App() {
   const [date, setSelectedDate] = useState("");
@@ -31,7 +32,9 @@ function App() {
         <div className="col">
           <NormalResult date={date} plate={plate} />
         </div>
-        <div className="col"></div>
+        <div className="col">
+          <HoyNoCirculaResult date={date} plate={plate} />
+        </div>
       </div>
     </div>
   );
