@@ -18,12 +18,14 @@ describe("Initial State", () => {
   test("Input should be empty", () => {
     const plateInputMask = "___-____";
 
-    const { getByLabelText } = render(<App />);
+    const { getByLabelText, getByRole } = render(<App />);
 
     const plateInput = getByLabelText("Ingrese su Placa");
     const dateInput = getByLabelText("Ingrese el día que desea salir");
+    const queryButton = getByRole("button");
 
     expect(plateInput.value).toBe(plateInputMask);
     expect(dateInput.value).toBe("");
+    expect(queryButton).toBeDisabled();
   });
 });

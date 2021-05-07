@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { fireEvent, render, waitFor } from "@testing-library/react";
 import App from "../App";
 
@@ -9,6 +9,7 @@ describe("Plate input", () => {
 
     expect(plateEmptyError).toBeInTheDocument();
   });
+
   test("Error message should disapper if a correct plate is added", async () => {
     const { getByText, getByLabelText, queryByText } = render(<App />);
     const plateEmptyError = queryByText(`Debe ingresar una placa válida`);
@@ -21,7 +22,6 @@ describe("Plate input", () => {
     await waitFor(() => {
       expect(
         queryByText("Debe ingresar una palca válida")
-        // plateEmptyError
       ).not.toBeInTheDocument();
     });
   });

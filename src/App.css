@@ -82,6 +82,16 @@ body {
   box-shadow: inset 6px 6px 12px #2d2d2d, inset -6px -6px 12px #494949;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  background: var(--greyDark);
+  color: var(--background);
+}
+
+.btn:disabled:active {
+  box-shadow: inherit;
+}
+
 .error-message {
   justify-self: flex-end;
   color: var(--error);
