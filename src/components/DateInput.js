@@ -7,6 +7,14 @@ registerLocale("es", es);
 
 function DateInput({ dateProp }) {
   const { date, setSelectedDate } = dateProp;
+
+  const renderErrorMessage = () => {
+    if (!date && !date?.length) {
+      return <p className="error-message">Debe seleccionar una fecha</p>;
+    }
+    return null;
+  };
+
   return (
     <div className="input-container">
       <label className="d-flex">
@@ -21,9 +29,7 @@ function DateInput({ dateProp }) {
           minDate={new Date()}
         />
       </label>
-      {date?.length === 0 && (
-        <p className="error-message">Debe seleccionar una fecha</p>
-      )}
+      {renderErrorMessage()}
     </div>
   );
 }
