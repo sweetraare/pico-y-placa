@@ -24,7 +24,7 @@ function DateInput({ dateProp }) {
           onChange={setSelectedDate}
           showTimeSelect
           locale="es"
-          dateFormat="dd/mm/yyyy h:mm aa"
+          dateFormat="dd/MM/yyyy h:mm aa"
           timeIntervals={15}
           minDate={new Date()}
         />
