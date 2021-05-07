@@ -47,4 +47,14 @@ describe("Normal Result", () => {
       ).toBeInTheDocument();
     });
   });
+
+  test("Should answer you can't ride if non ob the above conditions match", async () => {
+    const plate = "ABA-1110"; // 1 -> can't ride on mon
+    const date = new Date("2021/05/07 08:30"); //fri
+    const { getByText } = render(<NormalResult plate={plate} date={date} />);
+
+    await waitFor(() => {
+      expect(getByText("No puede circular")).toBeInTheDocument();
+    });
+  });
 });

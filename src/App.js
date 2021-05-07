@@ -10,15 +10,10 @@ function App() {
   const [date, setSelectedDate] = useState("");
   const [plate, setPlate] = useState("");
 
-  const isDisabled = () => {
-    if (!date && !date?.length) {
-      return true;
-    }
-    if (plate?.replaceAll?.("_", "").length !== 8) {
-      return true;
-    }
-    return false;
-  };
+  const picoYPlacaURL =
+    "https://elyex.com/horario-de-pico-y-placa-quito-2020-multas-y-mapa/";
+  const hoyNoCirculaURL =
+    "https://as.com/diarioas/2021/05/03/actualidad/1620072443_222020.html";
 
   return (
     <div className="page-container">
@@ -26,16 +21,24 @@ function App() {
         <h1 className="title">Pico y Placa</h1>
         <PlateInput plateProp={{ plate, setPlate }} />
         <DateInput dateProp={{ date, setSelectedDate }} />
-        <QueryButton disabled={isDisabled()} />
       </div>
-      <div className="container">
-        <div className="col">
+      <div className="response-container d-flex">
+        <div className="col card">
+          <h3 className="title">Pico Y Placa</h3>
           <NormalResult date={date} plate={plate} />
+          <a target="_blank" href={picoYPlacaURL}>
+            <QueryButton text={"Consultar sobre pico y placa"} />
+          </a>
         </div>
-        <div className="col">
+        <div className="col card">
+          <h3 className="title">Hoy no Circula (Toque de queda)</h3>
           <HoyNoCirculaResult date={date} plate={plate} />
+          <a target="_blank" href={hoyNoCirculaURL}>
+            <QueryButton text={"Consultar sobre hoy no circula"} />
+          </a>
         </div>
       </div>
+      <p className="sign">Made by: sweetraare</p>
     </div>
   );
 }

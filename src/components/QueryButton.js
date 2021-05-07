@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import "../App.css";
 
-function QueryButton({ disabled }) {
+function QueryButton({ text, ...props }) {
   return (
-    <div className="d-flex j-end">
-      <button
-        className="btn query-button"
-        disabled={disabled}
-        onClick={() => console.log("a")}
-      >
-        Consultar
-      </button>
-    </div>
+    <button className="btn query-button" {...props}>
+      {text}
+    </button>
   );
 }
 
